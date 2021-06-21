@@ -1,0 +1,10 @@
+// pruebas con Cluster Mode
+node server 
+node serverClusterMode 
+node --experimental-worker serverWorkerThreads.js 
+
+
+// pruebas con worker threads
+node --experimental-worker serverClusterMode_io_cpu.js 
+node serverClusterMode_io_fibonacci 
+node --experimental-worker serverWorker_io_cpu.js 

@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "fc10b92b-ae03-4083-8760-4e590699df73",
+		"name": "checkmedPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postTickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets"
+					]
+				},
+				"description": "Crea tickets con datos aleatorios de la libreria faker"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tickets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						""
+					]
+				},
+				"description": "lista todos los tickets que están en la base"
+			},
+			"response": []
+		},
+		{
+			"name": "getByIdTicket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tickets/60a1a123ec9724331b0465db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						"60a1a123ec9724331b0465db"
+					]
+				},
+				"description": "Realiza busqueda por id de ticket"
+			},
+			"response": []
+		},
+		{
+			"name": "putComment1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/comments/60bec872b69cb4fd9e02dfbd/60becb27418790527c23c398",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"60bec872b69cb4fd9e02dfbd",
+						"60becb27418790527c23c398"
+					]
+				},
+				"description": "Actualiza un comentario en particular a modo de ejemplo, no obstante se pueden elegir otros ids tanto en ticket como en comentario cambiando los parámetros. se recomienda previamente ejecutar getAllTickets para tomar distintos ids"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/comments/60a9e541b09e587d04e89243/60a9e541b09e587d04e89244",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"60a9e541b09e587d04e89243",
+						"60a9e541b09e587d04e89244"
+					]
+				},
+				"description": "id será el parámetro. No es necesario pasar el id del ticket"
+			},
+			"response": []
+		},
+		{
+			"name": "getTicketByIdPrestador",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tickets/prestador/10001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tickets",
+						"prestador",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/comments/60a9e538b09e587d04e89240",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						"60a9e538b09e587d04e89240"
+					]
+				},
+				"description": "Se puede ingresar como parametro el id de un ticket y te genera aleatoriamente un comentario."
+			},
+			"response": []
+		},
+		{
+			"name": "getAllComments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/comments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comments",
+						""
+					]
+				},
+				"description": "muestra todos los comentarios existentes"
+			},
+			"response": []
+		}
+	]
+}
